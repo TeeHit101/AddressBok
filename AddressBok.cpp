@@ -4,7 +4,7 @@
 using namespace std;
 
 // Definiera struct för en kontakt
-struct Kontakt {v
+struct Kontakt {
     string namn;
     string telefon;
     string email;
