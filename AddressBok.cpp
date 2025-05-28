@@ -3,17 +3,17 @@
 
 using namespace std;
 
-// Definiera struct för en kontakt
-struct Kontakt {
+// Definiera struct fÃ¶r en kontakt
+struct Kontakt {v
     string namn;
     string telefon;
     string email;
 };
 
-// Funktion för att lägga till en kontakt i adressboken
+// Funktion fÃ¶r att lÃ¤gga till en kontakt i adressboken
 void laggTillKontakt(Kontakt adressbok[], int& antalKontakter) {
     system("cls");
-    cout << "\nLägg till kontakt\n";
+    cout << "\nLÃ¤gg till kontakt\n";
     cout << "Namn: ";
     cin.ignore();
     getline(cin, adressbok[antalKontakter].namn);
@@ -24,7 +24,7 @@ void laggTillKontakt(Kontakt adressbok[], int& antalKontakter) {
     antalKontakter++;
     cout << "Kontakten har lagts till.\n";
 }
-// Funktion för att visa alla kontakter i adressboken
+// Funktion fÃ¶r att visa alla kontakter i adressboken
 
 void visaAdressbok(const Kontakt adressbok[], int antalKontakter) {
     system("cls");
@@ -34,21 +34,21 @@ void visaAdressbok(const Kontakt adressbok[], int antalKontakter) {
     }
 }
 
-// Funktion för att redigera en kontakt i adressboken
+// Funktion fÃ¶r att redigera en kontakt i adressboken
 void redigeraKontakt(Kontakt adressbok[], int antalKontakter) {
     system("cls");
     string redigerNamn;
-    cout << "\nAnge namnet på kontakten du vill redigera: ";
+    cout << "\nAnge namnet pÃ¥ kontakten du vill redigera: ";
     cin.ignore();
     getline(cin, redigerNamn);
 
     for (int i = 0; i < antalKontakter; ++i) {
         if (adressbok[i].namn == redigerNamn) {
-            cout << "Ange det nya namnet för kontakten: ";
+            cout << "Ange det nya namnet fÃ¶r kontakten: ";
             getline(cin, adressbok[i].namn);
-            cout << "Ange den nya telefonnumret för kontakten: ";
+            cout << "Ange den nya telefonnumret fÃ¶r kontakten: ";
             getline(cin, adressbok[i].telefon);
-            cout << "Ange den nya emailadressen för kontakten: ";
+            cout << "Ange den nya emailadressen fÃ¶r kontakten: ";
             getline(cin, adressbok[i].email);
             cout << "Kontakten '" << redigerNamn << "' har redigerats.\n";
             return;
@@ -66,8 +66,8 @@ int main() {
 
     bool fortsatt = true;
     while (fortsatt) {
-        cout << "\nVälj ett alternativ:\n";
-        cout << "1. Lägg till kontakt\n";
+        cout << "\nVÃ¤lj ett alternativ:\n";
+        cout << "1. LÃ¤gg till kontakt\n";
         cout << "2. Visa adressbok\n";
         cout << "3. Redigera kontakt\n";
         cout << "4. Avsluta programmet\n";
@@ -91,7 +91,7 @@ int main() {
             fortsatt = false;
             break;
         default:
-            cout << "\nOgiltigt val. Försök igen.\n";
+            cout << "\nOgiltigt val. FÃ¶rsÃ¶k igen.\n";
         }
     }
 
